@@ -1,0 +1,244 @@
+.navbar-container {
+    max-width: 1320px;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar-content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: space-between;
+}
+
+@media (min-width: 768px) {
+    .navbar-content {
+        flex-direction: row;
+    }
+}
+
+.logo-section {
+    display: flex;
+    align-items: center;
+}
+
+.logo-text {
+    font-size: 1.25rem;
+    margin-left: 10px;
+}
+
+.status-icons {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.status-expired {
+    background-color: #f8d7da;
+    padding: 5px 15px;
+    border-radius: 30px;
+    color: #f44336;
+}
+
+.status-item {
+    display: flex;
+    background-color: #e2e2e2;
+    padding: 5px 15px;
+    border-radius: 30px;
+    align-items: center;
+    gap: 10px;
+}
+
+.status-item .status-icon,
+.status-item .status-text {
+    transition: color 0.3s;
+}
+
+.group:hover .status-icon,
+.group:hover .status-text {
+    color: #08f;
+}
+
+.icon-wrapper {
+    background-color: #e2e2e2;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.action-icons {
+    display: flex;
+    gap: 10px;
+}
+
+.action-item {
+    padding: 5px 15px;
+    background-color: #e2e2e2;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.action-icon {
+    color: #08f;
+    font-size: 1.25rem;
+}
+
+.location-pricing {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.location-item {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.location-text {
+    font-size: 1.125rem;
+    font-weight: 600;
+}
+
+.price-section {
+    display: flex;
+    align-items: center;
+}
+
+.price-text {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.request-button-wrapper {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+
+.request-button {
+    padding: 16px 64px;
+    background-color: #08f;
+    border-radius: 5px;
+    font-size: 1.125rem;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.request-button:hover {
+    background-color: #006bb3;
+}
+
+
+.shipment-card {
+    background-color: #f9fbff;
+    border-radius: 8px;
+    padding: 16px;
+    width: 100%;
+    max-width: 600px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .shipment-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .company-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .company-logo img {
+    height: 32px;
+    width: 32px;
+  }
+  
+  .company-name {
+    font-weight: bold;
+    font-size: 16px;
+  }
+  
+  .shipment-status {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+  
+  .expired {
+    color: #ff6f6f;
+    background-color: #ffe8e8;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+  }
+  
+  .shipment-details, .duration {
+    font-size: 12px;
+    color: #666;
+  }
+  
+  .shipment-route {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .start-location, .end-location {
+    font-size: 14px;
+  }
+  
+  .route-details {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 12px;
+    color: #999;
+  }
+  
+  .progress-bar {
+    position: relative;
+    width: 150px;
+    height: 4px;
+    background-color: #e6f7ff;
+    border-radius: 2px;
+  }
+  
+  .progress {
+    width: 60%;
+    height: 100%;
+    background-color: #40a9ff;
+    border-radius: 2px;
+  }
+  
+  .shipment-card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .price {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .request-btn {
+    background-color: #1890ff;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .request-btn:hover {
+    background-color: #40a9ff;
+  }

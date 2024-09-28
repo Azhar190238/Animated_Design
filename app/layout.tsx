@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import HandAnimated from './components/HandAnimated'
+
+import Navbar from './components/Navbar'
 
 
 

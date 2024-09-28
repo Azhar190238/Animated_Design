@@ -1,119 +1,205 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-
-/* Horizontal lines */
-@keyframes horizontalLineLeftToRight {
-  0% {
-    width: 0;
-    left: 0;
-  }
-  100% {
-    width: 100%;
-    left: 0; /* Keep it at left: 0 to ensure it grows to the right */
-  }
+.navbar-container {
+    max-width: 1320px;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
 }
 
-@keyframes horizontalLineRightToLeft {
-  0% {
-    width: 0;
-    right: 0;
-  }
-  100% {
-    width: 100%;
-    right: 0; /* Keep it at right: 0 to ensure it grows to the left */
-  }
+.navbar-content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: space-between;
 }
 
-/* Vertical lines */
-@keyframes verticalLineTopToBottom {
-  0% {
-    height: 0;
-    bottom: 0;
-  }
-  100% {
-    height: 100%;
-    bottom: 0; /* Keep it at top: 0 to ensure it grows downward */
-  }
+@media (min-width: 768px) {
+    .navbar-content {
+        flex-direction: row;
+    }
 }
 
-@keyframes verticalLineBottomToTop {
-  0% {
-    height: 0;
-    bottom: 0;
-  }
-  100% {
-    height: 100%;
-    bottom: 0; /* Keep it at bottom: 0 to ensure it grows upward */
-  }
+.logo-section {
+    display: flex;
+    align-items: center;
 }
 
-/* General container for the border box */
-.border-box {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  padding: 20px;
+.logo-text {
+    font-size: 1.25rem; /* This will be reduced for mobile */
+    margin-left: 10px;
 }
 
-.border-box::before,
-.border-box::after,
-.border-box .animated-border::before,
-.border-box .animated-border::after {
-  content: "";
-  position: absolute;
-  background-color: #38b2ac;
-  transition: all 0.8s ease-in-out;
-  animation-play-state: paused;
+.status-icons {
+    display: flex;
+    gap: 10px;
+    align-items: center;
 }
 
-/* Top horizontal border (grows left to right) */
-.border-box::before {
-  top: 0;
-  left: 0;
-  width: 0;
-  height: 4px;
+.status-expired {
+    background-color: #f8d7da;
+    padding: 5px 15px;
+    border-radius: 30px;
+    color: #f44336;
 }
 
-/* Bottom horizontal border (grows right to left) */
-.border-box::after {
-  bottom: 0;
-  right: 0;
-  width: 0;
-  height: 4px;
+.status-item {
+    display: flex;
+    flex-direction: row;
+    background-color: #e2e2e2;
+    padding: 5px 15px; 
+    border-radius: 30px;
+    align-items: center;
+    height: 24px;
+    gap: 5px; 
 }
 
-/* Left vertical border (grows top to bottom) */
-.border-box .animated-border::before {
-  bottom: 0;
-  left: 0;
-  width: 4px;
-  height: 0;
+.status-item .status-icon,
+.status-item .status-text {
+    transition: color 0.3s;
 }
 
-/* Right vertical border (grows bottom to top) */
-.border-box .animated-border::after {
-  top: 0;
-  right: 0;
-  width: 4px;
-  height: 0;
+.group:hover .status-icon,
+.group:hover .status-text {
+    color: #08f;
 }
 
-/* Trigger horizontal animations on hover */
-.border-box:hover::before {
-  animation: horizontalLineLeftToRight 1s forwards;
+.icon-wrapper {
+    background-color: #e2e2e2;
+    padding: 5px 15px;
+    border-radius: 20px;
 }
 
-.border-box:hover::after {
-  animation: horizontalLineRightToLeft 1s forwards;
+.action-icons {
+    display: flex;
+    gap: 10px;
 }
 
-/* Trigger vertical animations on hover */
-.border-box:hover .animated-border::before {
-  animation: verticalLineTopToBottom 1s forwards;
+.action-item {
+    padding: 15px 15px;
+    background-color: #e2e2e2;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
 }
 
-.border-box:hover .animated-border::after {
-  animation: verticalLineBottomToTop 1s forwards;
+.action-icon {
+    color: #08f;
+    font-size: 1.25rem;
+}
+
+.location-pricing {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.location-item {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.location-text {
+    font-size: 1.125rem; /* This will be reduced for mobile */
+    font-weight: 600;
+}
+
+.price-section {
+    display: flex;
+    align-items: center;
+}
+
+.price-text {
+    font-size: 1.5rem; /* This will be reduced for mobile */
+    font-weight: bold;
+}
+
+.request-button-wrapper {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+
+.request-button {
+    padding: 16px 64px;
+    background-color: #08f;
+    border-radius: 5px;
+    font-size: 1.125rem; /* This will be reduced for mobile */
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.request-button:hover {
+    background-color: #006bb3;
+}
+
+/* Terms and Conditions */
+.terms-container {
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+    max-width: 600px;
+    padding: 20px;
+}
+
+h2 {
+    font-size: 24px; /* This will be reduced for mobile */
+    font-weight: bold;
+    color: #1a1a1a;
+}
+
+.terms-content {
+    font-size: 16px; /* This will be reduced for mobile */
+    color: #333;
+}
+
+.terms-content strong {
+    font-weight: 600;
+    color: #1a1a1a;
+}
+
+.terms-content ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.terms-content ul li {
+    margin-bottom: 8px;
+}
+
+.terms-content ul li::before {
+    content: "- ";
+    color: #000;
+}
+
+.terms-content a {
+    color: #0073e6;
+    text-decoration: none;
+}
+
+.terms-content a:hover {
+    text-decoration: underline;
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 767px) {
+    .logo-text {
+        font-size: 1rem; /* Smaller font size for mobile */
+    }
+
+    .status-item .status-icon,
+    .status-item .status-text,
+    .action-icon,
+    .location-text,
+    .price-text,
+    .request-button {
+        font-size: 0.875rem; /* Smaller font size for mobile */
+    }
+
+    h2 {
+        font-size: 20px; /* Smaller heading size for mobile */
+    }
+
+    .terms-content {
+        font-size: 14px; /* Smaller font size for terms content */
+    }
 }
